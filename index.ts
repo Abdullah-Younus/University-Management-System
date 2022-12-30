@@ -24,7 +24,7 @@ class Student extends Person {
 
 
 class Instuctor extends Person {
-    salary: number;
+    private salary: number;
     courses: Course[] = [];
 
     constructor(name: string, age: number, salary: number) {

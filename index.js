@@ -49,6 +49,16 @@ class Course {
         instructor.assignCourse(this);
     }
 }
+class Department {
+    name;
+    courses = [];
+    constructor(name) {
+        this.name = name;
+    }
+    addCourse(course) {
+        this.courses.push(course);
+    }
+}
 const student1 = new Student("Abdullah", 45, "5726975");
 const student2 = new Student("Sameer", 25, "4546465465");
 const instructor1 = new Instuctor("Zia Khan", 25, 45000);
@@ -59,6 +69,9 @@ course1.addStudent(student1);
 course1.addStudent(student2);
 course1.setInstructor(instructor1);
 console.log(course1);
+const department = new Department("Science");
+department.addCourse(course1);
+department.addCourse(course2);
 export {};
 // console.log('Student1:', student1);
 // console.log('Student2:', student2);
