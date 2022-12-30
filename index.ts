@@ -63,6 +63,8 @@ const student1 = new Student("Abdullah", 45, "5726975");
 const student2 = new Student("Sameer", 25, "4546465465");
 const instructor1 = new Instuctor("Zia Khan", 25, 45000);
 const instructor2 = new Instuctor("Inzamam Malik", 36, 45000);
+const course1 = new Course("5729","BlockChain");
+const course2 = new Course("654123","AI");
 
 console.log('Student1:', student1);
 console.log('Student2:', student2);
