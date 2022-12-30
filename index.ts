@@ -39,12 +39,19 @@ class Instuctor extends Person {
 class Course {
     id: string;
     name: string;
-    students: Student[];
-    instructor: Instuctor[];
+    students: Student[] = [];
+    instructor!: Instuctor;
 
     constructor(id: string, name: string) {
         this.id = id;
         this.name = name;
+    }
+
+    addStudent(student: Student) {
+        this.students.push(student)
+    }
+    setInstructor(instructor: Instuctor) {
+        this.instructor = instructor
     }
 }
 
@@ -57,8 +64,8 @@ const student2 = new Student("Sameer", 25, "4546465465");
 const instructor1 = new Instuctor("Zia Khan", 25, 45000);
 const instructor2 = new Instuctor("Inzamam Malik", 36, 45000);
 
-console.log('student1:', student1);
-console.log('student2:', student2);
+console.log('Student1:', student1);
+console.log('Student2:', student2);
 console.log('Instructor1:', instructor1);
 console.log('Instructor2:', instructor2);
 
