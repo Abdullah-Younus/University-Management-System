@@ -20,11 +20,20 @@ class Student extends Person {
         this.courses.push(course);
     }
 }
+class Instuctor extends Person {
+    salary;
+    courses = [];
+    constructor(name, age, salary) {
+        super(name, age);
+        this.salary = salary;
+    }
+    assignCourse(course) {
+        this.courses.push(course);
+    }
+}
 const student1 = new Student("Abdullah", 45, "5726975");
-student1.registerForCourses("BSC");
-student1.registerForCourses("Metaverse");
-console.log('Student1 ==>', student1);
 const student2 = new Student("Sameer", 25, "4546465465");
-student2.registerForCourses('BlockChain');
-console.log('student2 ===>', student2);
+const instructor1 = new Instuctor("Zia Khan", 22, 45000);
+instructor1.assignCourse("metaverse");
+console.log('Instructor:', instructor1);
 export {};
